@@ -9,3 +9,4 @@ updates:
     target-branch: 'main'
     ignore:
       - dependency-name: '@types/node'
+      - dependency-name: 'prettier'
