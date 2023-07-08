@@ -2,7 +2,6 @@
 import { MoonIcon, SunIcon } from '@heroicons/vue/24/outline';
 
 const darkModeHelper = useDarkModeHelper();
-darkModeHelper.init();
 </script>
 
 <template>

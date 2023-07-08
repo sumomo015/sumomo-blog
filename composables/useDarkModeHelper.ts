@@ -11,7 +11,7 @@ import { defineStore } from 'pinia';
 export const useDarkModeHelper = defineStore('darkModeHelper', {
   state: () => {
     return {
-      darkMode: false,
+      darkMode: isDarkMode(),
     };
   },
   actions: {
@@ -23,11 +23,6 @@ export const useDarkModeHelper = defineStore('darkModeHelper', {
       } else {
         document.documentElement.classList.remove('dark');
         localStorage.theme = 'light';
-      }
-    },
-    init() {
-      if (process.client) {
-        this.darkMode = isDarkMode();
       }
     },
   },
