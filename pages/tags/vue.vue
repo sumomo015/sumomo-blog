@@ -1,3 +1,3 @@
 <template>
-  <h1>GCP</h1>
+  <div>tags:vue</div>
 </template>
