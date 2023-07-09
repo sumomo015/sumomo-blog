@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+import { Navigation } from '@/types';
 
 type props = {
   navigationList: Navigation[];
@@ -21,7 +22,7 @@ watch(
 
 <template>
   <header
-    class="flex h-14 select-none justify-between bg-white px-4 py-2 shadow-sm shadow-[rgba(0,0,0,0.1)] dark:bg-zinc-800"
+    class="fixed inset-x-0 top-0 flex h-14 select-none justify-between bg-white px-4 py-2 shadow-sm shadow-[rgba(0,0,0,0.1)] dark:bg-zinc-800"
   >
     <nav class="flex items-center font-bold md:hidden">
       <div
@@ -68,7 +69,7 @@ watch(
     </nav>
 
     <div class="flex items-center">
-      <LayoutsDarkModeSwitch />
+      <PartsLayoutDarkSwitch />
     </div>
 
     <Transition name="fade">
@@ -117,7 +118,7 @@ watch(
           <NuxtLink
             class="block rounded px-3 py-1.5 font-bold transition-colors hover:bg-black hover:bg-opacity-5 hover:dark:bg-white hover:dark:bg-opacity-5"
             :to="nav.path"
-            active-class="bg-black bg-opacity-5 dark:bg-white dark:bg-opacity-5"
+            active-class="bg-black bg-opacity-5 dark:bg-white dark:bg-opacity-5 text-primary"
             >{{ nav.name }}</NuxtLink
           >
         </div>
