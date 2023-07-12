@@ -16,7 +16,7 @@ watch(
   () => route.path,
   () => {
     isSubmenuOpen.value = false;
-  }
+  },
 );
 </script>
 

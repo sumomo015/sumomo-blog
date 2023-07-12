@@ -15,7 +15,7 @@ const fetchArticleList = async (): Promise<ArticleWithDate[]> => {
       .sort({
         createdAt: -1,
       })
-      .find()
+      .find(),
   );
 
   if (!articleList.value) throw new Error('articleList is undefined');
@@ -27,7 +27,7 @@ const fetchArticleList = async (): Promise<ArticleWithDate[]> => {
         createdAt: new Date(article.createdAt),
         updatedAt: article.updatedAt ? new Date(article.updatedAt) : undefined,
       };
-    }
+    },
   );
 
   if (!result) throw new Error('articleList is undefined');
