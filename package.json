@@ -20,7 +20,7 @@
     "@types/node": "^18.16.19",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
-    "nuxt": "^3.6.2",
+    "nuxt": "^3.6.3",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "typescript": "^5.1.6",
