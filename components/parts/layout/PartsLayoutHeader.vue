@@ -33,9 +33,9 @@ watch(
       </div>
 
       <img
-        src="assets/images/icon.png"
+        src="~/assets/images/icon.png"
         alt="icon"
-        class="block h-8 rounded-full"
+        class="block h-8 w-8 rounded-full"
       />
 
       <NuxtLink
@@ -48,9 +48,9 @@ watch(
 
     <nav class="hidden items-center font-bold md:flex">
       <img
-        src="assets/images/icon.png"
+        src="~/assets/images/icon.png"
         alt="icon"
-        class="block h-8 rounded-full"
+        class="block h-8 w-8 rounded-full"
       />
       <NuxtLink
         class="mr-2 px-3 py-1 transition-colors hover:text-primary"
@@ -91,9 +91,9 @@ watch(
         class="flex h-14 select-none items-center bg-white px-4 py-2 shadow-sm shadow-[rgba(0,0,0,0.1)] dark:bg-zinc-800"
       >
         <img
-          src="assets/images/icon.png"
+          src="~/assets/images/icon.png"
           alt="icon"
-          class="block h-8 rounded-full"
+          class="block h-8 w-8 rounded-full"
         />
         <NuxtLink
           class="mr-2 px-3 py-1 font-bold transition-colors hover:text-primary"
