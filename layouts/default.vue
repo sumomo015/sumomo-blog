@@ -2,6 +2,9 @@
 const colorMode = useColorMode()
 const isDarkMode = computed(() => colorMode.value === 'dark')
 
+const now = useNow()
+const year = computed(() => now.value.getFullYear())
+
 function toggleColorScheme() {
   colorMode.preference = isDarkMode.value ? 'light' : 'dark'
 }
@@ -18,6 +21,9 @@ function toggleColorScheme() {
       <slot />
     </main>
 
-    <LayoutsFooter class="py-10 sm:py-16" />
+    <LayoutsFooter
+      :year="year"
+      class="py-10 sm:py-16"
+    />
   </div>
 </template>
