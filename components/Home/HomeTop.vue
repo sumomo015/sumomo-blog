@@ -18,7 +18,7 @@
         </NuxtLink>
 
         <NuxtLink
-          to="https://bsky.app/profile/sumomo015.bsky.social"
+          to="https://bsky.app/profile/sumomo015.dev"
           target="_blank"
           external
           class="flex items-center gap-x-2 base-hover-opacity"
