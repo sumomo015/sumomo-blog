@@ -13,6 +13,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "dprint fmt",
+    "test:unit": "vitest",
+    "test:unit-ui": "vitest --coverage.enabled=true --ui",
     "update:ncu": "ncu -ui",
     "update:nuxi": "nuxi upgrade -f"
   },

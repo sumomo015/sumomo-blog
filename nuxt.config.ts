@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     'nuxt-security',
     '@nuxt/test-utils/module',
   ],
+  $test: {
+    ogImage: { enabled: false },
+  },
   devtools: { enabled: true },
   app: {
     rootAttrs: { id: '__nuxt' },
