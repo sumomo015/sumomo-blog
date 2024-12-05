@@ -62,7 +62,7 @@ export default defineNuxtConfig({
       image: '/images/icon.png',
       sameAs: [
         'https://github.com/sumomo015',
-        'https://bsky.app/profile/sumomo015.bsky.social',
+        'https://bsky.app/profile/sumomo015.dev',
       ],
     }),
   },
