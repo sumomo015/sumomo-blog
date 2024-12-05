@@ -30,6 +30,7 @@ defineEmits<{ toggleColorScheme: [] }>()
           class="size-8 flex items-center justify-center rounded-md duration-none base-hover-bg"
           type="button"
           aria-label="Toggle dark mode"
+          data-testid="toggle-button"
           @click="$emit('toggleColorScheme')"
         >
           <ClientOnly>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const now = useNow()
-const year = computed(() => now.value.getFullYear())
+defineProps<{ year: number }>()
 </script>
 
 <template>

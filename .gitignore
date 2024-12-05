@@ -25,3 +25,6 @@ logs
 
 # VSCode
 .vscode
+
+# Vitest
+coverage
