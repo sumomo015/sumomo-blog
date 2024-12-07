@@ -47,6 +47,7 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets/images',
     ipx: { modifiers: { format: 'avif', quality: 75 } },
+    static: { modifiers: { format: 'webp', quality: 75 } },
   },
   linkChecker: {
     failOnError: true,
