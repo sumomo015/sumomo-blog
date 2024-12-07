@@ -16,14 +16,16 @@
     "test:unit": "vitest",
     "test:unit-ui": "vitest --coverage.enabled=true --ui",
     "update:ncu": "ncu -ui",
-    "update:nuxi": "nuxi upgrade -f"
+    "update:nuxi": "nuxi upgrade -f",
+    "deploy": "node --env-file=.env --experimental-strip-types commands/deploy.ts"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.14.0",
     "@iconify-json/ph": "1.2.1",
     "@iconify-json/simple-icons": "1.2.14",
     "@nuxt/eslint": "0.7.2",
     "@nuxt/image": "1.8.1",
-    "@nuxt/test-utils": "3.14.4",
+    "@nuxt/test-utils": "3.15.1",
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/html-validator": "1.8.2",
     "@nuxtjs/seo": "2.0.2",
@@ -50,5 +52,5 @@
     "vue-router": "latest",
     "vue-tsc": "2.1.10"
   },
-  "packageManager": "pnpm@9.14.4"
+  "packageManager": "pnpm@9.15.0"
 }
