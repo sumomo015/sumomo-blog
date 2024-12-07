@@ -17,7 +17,7 @@
     "test:unit-ui": "vitest --coverage.enabled=true --ui",
     "update:ncu": "ncu -ui",
     "update:nuxi": "nuxi upgrade -f",
-    "deploy": "node --env-file=.env --experimental-strip-types commands/deploy.ts"
+    "deploy": "node --experimental-strip-types commands/deploy.ts"
   },
   "dependencies": {
     "@google-cloud/storage": "7.14.0",
