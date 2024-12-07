@@ -8,10 +8,14 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@nuxtjs/seo',
+    '@nuxt/scripts',
     '@nuxtjs/html-validator',
     'nuxt-security',
     '@nuxt/test-utils/module',
   ],
+  $production: {
+    scripts: { registry: { googleAnalytics: true } },
+  },
   $test: {
     ogImage: { enabled: false },
   },
@@ -37,6 +41,11 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     fallback: 'light',
+  },
+  runtimeConfig: {
+    public: {
+      scripts: { googleAnalytics: { id: '' } },
+    },
   },
   compatibilityDate: '2024-11-01',
   typescript: {
@@ -80,6 +89,7 @@ export default defineNuxtConfig({
       contentSecurityPolicy: {
         'font-src': ['\'self\'', 'https://fonts.gstatic.com'],
         'img-src': ['\'self\'', 'data:'],
+        'connect-src': ['\'self\'', 'https://www.google-analytics.com'],
       },
     },
     sri: true,
