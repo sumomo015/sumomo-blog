@@ -88,8 +88,24 @@ export default defineNuxtConfig({
     headers: {
       contentSecurityPolicy: {
         'font-src': ['\'self\'', 'https://fonts.gstatic.com'],
-        'img-src': ['\'self\'', 'data:'],
-        'connect-src': ['\'self\'', 'https://www.google-analytics.com'],
+        'img-src': [
+          '\'self\'',
+          'data:',
+          'https://*.google-analytics.com',
+          'https://*.googletagmanager.com',
+        ],
+        'connect-src': [
+          '\'self\'',
+          'https://*.google-analytics.com',
+          'https://*.analytics.google.com',
+          'https://*.googletagmanager.com',
+        ],
+        'script-src': [
+          '\'self\'',
+          '\'strict-dynamic\'',
+          '\'nonce-{{nonce}}\'',
+          'https://*.googletagmanager.com',
+        ],
       },
     },
     sri: true,
