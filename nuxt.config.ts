@@ -102,7 +102,6 @@ export default defineNuxtConfig({
         ],
         'script-src': [
           '\'self\'',
-          '\'strict-dynamic\'',
           '\'nonce-{{nonce}}\'',
           'https://*.googletagmanager.com',
         ],
