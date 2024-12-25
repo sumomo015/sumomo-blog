@@ -13,11 +13,17 @@ export default defineNuxtConfig({
     'nuxt-security',
     '@nuxt/test-utils/module',
   ],
+  $development: {
+    security: { enabled: false },
+  },
   $production: {
     scripts: { registry: { googleAnalytics: true } },
   },
   $test: {
     ogImage: { enabled: false },
+  },
+  components: {
+    dirs: [{ extensions: ['vue'], path: '~/components' }],
   },
   devtools: { enabled: true },
   app: {
@@ -105,6 +111,7 @@ export default defineNuxtConfig({
           '\'nonce-{{nonce}}\'',
           'https://*.googletagmanager.com',
         ],
+        'style-src': ['\'self\'', '\'unsafe-inline\''],
       },
     },
     sri: true,
