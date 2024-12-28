@@ -5,7 +5,7 @@ defineEmits<{ toggleColorScheme: [] }>()
 
 <template>
   <header class="border-b-1 border-gray-200 dark:border-gray-800 base-bg">
-    <div class="flex items-center p-4 pl-6 lg:(mx-auto w-screen-lg)">
+    <div class="flex items-center p-4 pl-6 xl:(mx-auto w-screen-xl)">
       <NuxtLink
         to="/"
         class="text-base font-bold base-color-header base-hover-opacity"

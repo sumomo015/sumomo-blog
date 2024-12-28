@@ -10,7 +10,7 @@ defineProps<{ error: NuxtError }>()
       <h1 class="border-gray-200 text-2xl font-bold sm:(mr-6 border-r pr-6 text-3xl) dark:border-gray-800">
         {{ error.statusCode }}
       </h1>
-      <p class="text-lg text-gray-500 dark:text-gray-400">
+      <p class="text-lg base-color-secondary">
         {{ error.statusMessage }}
       </p>
     </div>

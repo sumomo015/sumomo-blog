@@ -13,11 +13,12 @@ function toggleColorScheme() {
 <template>
   <div class="h-full flex flex-col">
     <LayoutsHeader
+      class="fixed left-0 right-0 top-0 z-50"
       :is-dark-mode="isDarkMode"
       @toggle-color-scheme="toggleColorScheme"
     />
 
-    <main class="flex-grow-1">
+    <main class="flex-grow-1 pt-16">
       <slot />
     </main>
 
