@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`LayoutsFooter > スナップショット 1`] = `
-"<footer class="base-color-secondary text-center text-sm">
+"<footer class="text-center text-sm base-color-secondary">
   <p class="mb-2"> Made with 💚 in Tokyo<br> using Vue, Nuxt, and UnoCSS. </p>
   <p>© 2024 - sumomo015.dev</p>
 </footer>"

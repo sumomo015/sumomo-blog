@@ -2,7 +2,7 @@
 
 exports[`LayoutsHeader > スナップショット > dark 1`] = `
 "<header class="border-b-1 border-gray-200 dark:border-gray-800 base-bg">
-  <div class="flex items-center p-4 pl-6 lg:mx-auto lg:w-screen-lg"><a href="/" class="text-base font-bold base-color-header base-hover-opacity"> Sumomo's Blog </a>
+  <div class="flex items-center p-4 pl-6 xl:mx-auto xl:w-screen-xl"><a href="/" class="text-base font-bold base-color-header base-hover-opacity"> Sumomo's Blog </a>
     <div class="flex-grow-1"></div>
     <div class="flex gap-x-1.5"><a href="https://github.com/sumomo015" rel="noopener noreferrer" target="_blank" class="size-8 flex items-center justify-center rounded-md base-hover-bg" aria-label="Go to GitHub"><span class="i-simple-icons-github size-5"></span></a><button class="size-8 flex items-center justify-center rounded-md duration-none base-hover-bg" type="button" aria-label="Toggle dark mode" data-testid="toggle-button"><span class="size-5 i-ph-moon"></span></button><button class="size-8 flex items-center justify-center rounded-md lg:hidden base-hover-bg" type="button" aria-label="Toggle navigation menu"><span class="i-ph-list size-5"></span></button></div>
   </div>
@@ -11,7 +11,7 @@ exports[`LayoutsHeader > スナップショット > dark 1`] = `
 
 exports[`LayoutsHeader > スナップショット > light 1`] = `
 "<header class="border-b-1 border-gray-200 dark:border-gray-800 base-bg">
-  <div class="flex items-center p-4 pl-6 lg:mx-auto lg:w-screen-lg"><a href="/" class="text-base font-bold base-color-header base-hover-opacity"> Sumomo's Blog </a>
+  <div class="flex items-center p-4 pl-6 xl:mx-auto xl:w-screen-xl"><a href="/" class="text-base font-bold base-color-header base-hover-opacity"> Sumomo's Blog </a>
     <div class="flex-grow-1"></div>
     <div class="flex gap-x-1.5"><a href="https://github.com/sumomo015" rel="noopener noreferrer" target="_blank" class="size-8 flex items-center justify-center rounded-md base-hover-bg" aria-label="Go to GitHub"><span class="i-simple-icons-github size-5"></span></a><button class="size-8 flex items-center justify-center rounded-md duration-none base-hover-bg" type="button" aria-label="Toggle dark mode" data-testid="toggle-button"><span class="size-5 i-ph-sun"></span></button><button class="size-8 flex items-center justify-center rounded-md lg:hidden base-hover-bg" type="button" aria-label="Toggle navigation menu"><span class="i-ph-list size-5"></span></button></div>
   </div>
