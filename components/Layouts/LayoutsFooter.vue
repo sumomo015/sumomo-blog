@@ -3,7 +3,7 @@ defineProps<{ year: number }>()
 </script>
 
 <template>
-  <footer class="text-center text-sm text-gray-500 dark:text-gray-400">
+  <footer class="text-center text-sm base-color-secondary">
     <p class="mb-2">
       Made with 💚 in Tokyo<br>
       using Vue, Nuxt, and UnoCSS.

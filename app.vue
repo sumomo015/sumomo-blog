@@ -13,10 +13,10 @@
 }
 
 :root {
-  --uno: "font-sans text-base"
+  --uno: "font-sans text-base/7"
 }
 
 body {
-  --uno: "base-color-text base-bg"
+  --uno: "base-color-primary base-bg"
 }
 </style>

@@ -31,8 +31,8 @@
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/html-validator": "1.8.2",
     "@nuxtjs/seo": "2.0.2",
-    "@unocss/eslint-config": "0.65.2",
-    "@unocss/nuxt": "0.65.2",
+    "@unocss/eslint-config": "0.65.3",
+    "@unocss/nuxt": "0.65.3",
     "@vitest/coverage-v8": "2.1.8",
     "@vitest/ui": "2.1.8",
     "@vue/test-utils": "2.4.6",
@@ -40,19 +40,18 @@
     "@vueuse/nuxt": "12.2.0",
     "dprint": "0.48.0",
     "eslint": "9.17.0",
-    "happy-dom": "15.11.7",
+    "happy-dom": "16.0.1",
     "npm-check-updates": "17.1.12",
     "nuxt": "3.15.0",
     "nuxt-schema-org": "4.0.4",
     "nuxt-security": "2.1.5",
     "typescript": "5.7.2",
     "typescript-eslint": "8.18.2",
-    "unocss": "0.65.2",
-    "vite": "6.0.5",
+    "unocss": "0.65.3",
     "vitest": "2.1.8",
     "vue": "latest",
     "vue-router": "latest",
     "vue-tsc": "2.2.0"
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@9.15.2"
 }

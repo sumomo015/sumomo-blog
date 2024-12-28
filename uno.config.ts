@@ -3,13 +3,13 @@ import {
   transformerDirectives,
   transformerVariantGroup,
   presetWebFonts,
-  presetMini,
+  presetUno,
   presetIcons,
 } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetMini({
+    presetUno({
       dark: {
         dark: '.dark-mode',
         light: '.light-mode',
@@ -39,7 +39,8 @@ export default defineConfig({
   shortcuts: {
     'base-bg': 'bg-white dark:bg-gray-900',
     'base-color-header': 'text-gray-900 dark:text-white',
-    'base-color-text': 'text-gray-700 dark:text-gray-200',
+    'base-color-primary': 'text-gray-700 dark:text-gray-200',
+    'base-color-secondary': 'text-gray-500 dark:text-gray-400',
     'base-hover-opacity': 'hover:opacity-60 transition-opacity duration-250',
     'base-hover-bg': 'hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors',
   },
