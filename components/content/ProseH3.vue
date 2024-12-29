@@ -5,7 +5,7 @@ const { h3 } = useAnchorLinks()
 </script>
 
 <template>
-  <h2
+  <h3
     :id="props.id"
     class="mb-5 mt-8 scroll-mt-20 text-xl font-bold base-color-header"
   >
@@ -16,5 +16,5 @@ const { h3 } = useAnchorLinks()
       <slot />
     </a>
     <slot v-else />
-  </h2>
+  </h3>
 </template>
