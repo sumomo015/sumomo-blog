@@ -6,7 +6,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { LayoutsHeader } from '#components'
 
 describe('LayoutsHeader', () => {
-  const selectorToogleButton = '[data-testid="toggle-color-scheme-button"]'
+  const selectorToggleButton = '[data-testid="toggle-color-scheme-button"]'
   const selectorMenuButton = '[data-testid="toggle-menu-button"]'
 
   it('スナップショット', async () => {
@@ -25,7 +25,7 @@ describe('LayoutsHeader', () => {
     const wrapper = await mountSuspended(LayoutsHeader, {
       props: { isDarkMode: true },
     })
-    await wrapper.find(selectorToogleButton).trigger('click')
+    await wrapper.find(selectorToggleButton).trigger('click')
     expect(wrapper.emitted('toggleColorScheme')).toBeTruthy()
   })
 
