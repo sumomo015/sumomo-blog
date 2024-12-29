@@ -41,6 +41,7 @@ export default defineConfig({
     'base-color-header': 'text-gray-900 dark:text-white',
     'base-color-primary': 'text-gray-700 dark:text-gray-200',
     'base-color-secondary': 'text-gray-500 dark:text-gray-400',
+    'base-color-link': 'text-sky-500 dark:text-sky-400',
     'base-hover-opacity': 'hover:opacity-60 transition-opacity duration-250',
     'base-hover-bg': 'hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors',
   },

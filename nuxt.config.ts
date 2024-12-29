@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/seo',
     '@nuxt/scripts',
+    '@nuxt/content',
     '@nuxtjs/html-validator',
     'nuxt-security',
     '@nuxt/test-utils/module',
@@ -48,6 +49,14 @@ export default defineNuxtConfig({
     preference: 'system',
     fallback: 'light',
   },
+  content: {
+    highlight: {
+      theme: {
+        'default': 'vitesse-light',
+        'dark-mode': 'vitesse-dark',
+      },
+    },
+  },
   runtimeConfig: {
     public: {
       scripts: { googleAnalytics: { id: '' } },
@@ -58,7 +67,6 @@ export default defineNuxtConfig({
     tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
   },
   eslint: { config: { stylistic: true } },
-  htmlValidator: { failOnError: true },
   image: {
     dir: 'assets/images',
     ipx: { modifiers: { format: 'avif', quality: 75 } },
@@ -68,7 +76,7 @@ export default defineNuxtConfig({
     failOnError: true,
   },
   ogImage: {
-    zeroRuntime: true,
+    strictNuxtContentPaths: true,
     defaults: { component: 'Sumomo' },
     fonts: [
       'Noto+Sans+JP:400',
@@ -123,4 +131,5 @@ export default defineNuxtConfig({
     },
   },
   seo: { fallbackTitle: false },
+  sitemap: { strictNuxtContentPaths: true },
 })

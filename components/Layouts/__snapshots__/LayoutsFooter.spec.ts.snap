@@ -2,7 +2,7 @@
 
 exports[`LayoutsFooter > スナップショット 1`] = `
 "<footer class="text-center text-sm base-color-secondary">
-  <p class="mb-2"> Made with 💚 in Tokyo<br> using Vue, Nuxt, and UnoCSS. </p>
+  <p class="mb-2"> Made with 🩵 in Tokyo<br> using Vue, Nuxt, and UnoCSS. </p>
   <p>© 2024 - sumomo015.dev</p>
 </footer>"
 `;
