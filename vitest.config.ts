@@ -5,7 +5,7 @@ export default defineVitestConfig({
   test: {
     coverage: {
       provider: 'v8',
-      include: ['**/components/**', '**/composables/**', '**/utils/**'],
+      include: ['**/components/**/*.vue', '**/composables/**/*.ts', '**/utils/**/*.ts'],
       exclude: [...coverageConfigDefaults.exclude, '**/*.story.vue'],
     },
     environment: 'happy-dom',

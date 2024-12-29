@@ -1,8 +1,5 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: '',
-  articleModifiedTime: '2024-12-28',
-})
+useSeoMeta({ title: '' })
 </script>
 
 <template>
