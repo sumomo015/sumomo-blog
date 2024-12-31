@@ -1,5 +1,7 @@
 <template>
   <div class="mx-auto h-full max-w-7xl px-4 lg:px-8 sm:px-6">
+    <OgImage />
+
     <ContentDoc v-slot="{ doc }">
       <article>
         <BlogHeader
