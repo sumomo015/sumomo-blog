@@ -55,6 +55,13 @@ describe('Prose', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
+  it('ProsePre', async () => {
+    const wrapper = await mountSuspended(ProseCodeInline, {
+      slots: { default: 'コードブロック' },
+    })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+
   it('ProseUl', async () => {
     const wrapper = await mountSuspended(ProseUl, {
       slots: { default: 'リスト' },

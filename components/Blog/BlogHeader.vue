@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
 import type { Article } from '~/shared/types/content'
 
-const props = defineProps<{ parsedContent: ParsedContent }>()
-const article = computed<Article>(() => props.parsedContent as Article)
+defineProps<{ article: Article }>()
 </script>
 
 <template>

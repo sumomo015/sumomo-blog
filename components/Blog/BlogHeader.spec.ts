@@ -5,7 +5,7 @@ import { BlogHeader } from '#components'
 import type { Article } from '~/shared/types/content'
 
 describe('BlogHeader', () => {
-  const parsedContent: Article = {
+  const article: Article = {
     _type: 'markdown',
     _empty: false,
     _id: 'test-article',
@@ -21,21 +21,21 @@ describe('BlogHeader', () => {
 
   it('正常にレンダリングされること', async () => {
     const wrapper = await mountSuspended(BlogHeader, {
-      props: { parsedContent },
+      props: { article },
     })
     expect(wrapper.exists()).toBe(true)
   })
 
   it('タイトルが表示されること', async () => {
     const wrapper = await mountSuspended(BlogHeader, {
-      props: { parsedContent },
+      props: { article },
     })
     expect(wrapper.find('h1').text()).toBe('Test Article')
   })
 
   it('投稿日が表示されること', async () => {
     const wrapper = await mountSuspended(BlogHeader, {
-      props: { parsedContent },
+      props: { article },
     })
     const timeElement = wrapper.find('time')
     expect(timeElement.exists()).toBe(true)
@@ -44,7 +44,7 @@ describe('BlogHeader', () => {
 
   it('投稿日がない場合、表示されないこと', async () => {
     const wrapper = await mountSuspended(BlogHeader, {
-      props: { parsedContent: { ...parsedContent, datePublished: undefined } },
+      props: { article: { ...article, datePublished: undefined } },
     })
     const timeElements = wrapper.findAll('time')
     expect(timeElements.length).toBe(1)
@@ -53,7 +53,7 @@ describe('BlogHeader', () => {
 
   it('最終更新日が表示されること', async () => {
     const wrapper = await mountSuspended(BlogHeader, {
-      props: { parsedContent },
+      props: { article },
     })
     const timeElements = wrapper.findAll('time')
     expect(timeElements.length).toBe(2)
@@ -62,7 +62,7 @@ describe('BlogHeader', () => {
 
   it('最終更新日がない場合、表示されないこと', async () => {
     const wrapper = await mountSuspended(BlogHeader, {
-      props: { parsedContent: { ...parsedContent, dateModified: undefined } },
+      props: { article: { ...article, dateModified: undefined } },
     })
     const timeElements = wrapper.findAll('time')
     expect(timeElements.length).toBe(1)
