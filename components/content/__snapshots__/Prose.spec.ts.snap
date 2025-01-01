@@ -14,4 +14,6 @@ exports[`Prose > ProseLi 1`] = `"<li class="my-1 ps-1.5">リストアイテム</
 
 exports[`Prose > ProseP 1`] = `"<p class="my-5">段落</p>"`;
 
+exports[`Prose > ProsePre 1`] = `"<code class="px-1.5 py-1 rounded-md text-sm font-semibold base-color-header border-1 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">コードブロック</code>"`;
+
 exports[`Prose > ProseUl 1`] = `"<ul class="my-2 list-disc list-outside ps-6">リスト</ul>"`;

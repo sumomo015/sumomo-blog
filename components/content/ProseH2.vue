@@ -9,12 +9,12 @@ const { h2 } = useAnchorLinks()
     :id="props.id"
     class="mb-6 mt-12 scroll-mt-20 text-2xl font-bold base-color-header"
   >
-    <a
+    <NuxtLink
       v-if="!!props.id && h2"
-      :href="`#${props.id}`"
+      :to="{ hash: `#${props.id}` }"
     >
       <slot />
-    </a>
+    </NuxtLink>
     <slot v-else />
   </h2>
 </template>

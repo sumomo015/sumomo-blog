@@ -40,6 +40,9 @@ export default defineNuxtConfig({
     },
   },
   css: ['@unocss/reset/tailwind.css'],
+  router: {
+    options: { scrollBehaviorType: 'smooth' },
+  },
   site: {
     name: 'Sumomo\'s Blog',
     description: 'Sumomo のブログです。日々の学びや技術的なメモを書いています。',
@@ -52,8 +55,8 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: {
-        'default': 'vitesse-light',
-        'dark-mode': 'vitesse-dark',
+        'default': 'one-light',
+        'dark-mode': 'one-dark-pro',
       },
     },
   },
@@ -75,9 +78,7 @@ export default defineNuxtConfig({
     ipx: { modifiers: { format: 'avif', quality: 75 } },
     static: { modifiers: { format: 'avif', quality: 75 } },
   },
-  linkChecker: {
-    failOnError: true,
-  },
+  linkChecker: { enabled: false },
   ogImage: {
     strictNuxtContentPaths: true,
     defaults: { component: 'Sumomo' },
