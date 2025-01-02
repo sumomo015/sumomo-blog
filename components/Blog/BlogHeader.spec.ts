@@ -68,4 +68,11 @@ describe('BlogHeader', () => {
     expect(timeElements.length).toBe(1)
     expect(timeElements[0]?.text()).not.toContain('最終更新日')
   })
+
+  it('スナップショット', async () => {
+    const wrapper = await mountSuspended(BlogHeader, {
+      props: { article },
+    })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
 })

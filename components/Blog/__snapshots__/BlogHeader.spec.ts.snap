@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BlogHeader > スナップショット 1`] = `
+"<div>
+  <div class="mb-10"><a href="/blog" class="base-color-link">← 記事一覧へ戻る</a></div>
+  <h1 class="mb-4 text-4xl font-bold base-color-header">Test Article</h1>
+  <p class="base-color-secondary"><time datetime="2023-01-01">投稿日 2023-01-01</time> ・ <time datetime="2023-01-02">最終更新日 2023-01-02</time></p>
+</div>"
+`;

@@ -75,7 +75,7 @@ describe('BlogToc', () => {
       unobserve = vi.fn()
 
       constructor(callback: IntersectionObserverCallback, options?: IntersectionObserverInit) {
-        observerCallback = (entries) => {
+        observerCallback = (entries: IntersectionObserverEntry[]) => {
           callback(entries, this)
         }
         this.root = options?.root ?? null
@@ -136,5 +136,10 @@ describe('BlogToc', () => {
     observerCallback([{ isIntersecting: false, target: section1.element } as IntersectionObserverEntry])
     await nextTick()
     expect(wrapper.find(section1.selector).classes()).not.toContain(LINK_CLASS)
+  })
+
+  it('スナップショット', async () => {
+    const wrapper = await mountSuspended(BlogToc, { props: { links } })
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })
