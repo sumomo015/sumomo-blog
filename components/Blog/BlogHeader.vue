@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Article } from '~/shared/types/content'
+import type { BlogCollectionItem } from '@nuxt/content'
 
-defineProps<{ article: Article }>()
+defineProps<{ article: BlogCollectionItem }>()
 </script>
 
 <template>
@@ -21,10 +21,18 @@ defineProps<{ article: Article }>()
       <time
         v-if="article.datePublished"
         :datetime="article.datePublished"
-      >投稿日 {{ article.datePublished }}</time>
-      <template v-if="article.dateModified">
-        ・ <time :datetime="article.dateModified">最終更新日 {{ article.dateModified }}</time>
-      </template>
+      >
+        投稿日 {{ article.datePublished }}
+      </time>
+
+      <span v-if="article.dateModified"> ・</span>
+
+      <time
+        v-if="article.dateModified"
+        :datetime="article.dateModified"
+      >
+        最終更新日 {{ article.dateModified }}
+      </time>
     </p>
   </div>
 </template>

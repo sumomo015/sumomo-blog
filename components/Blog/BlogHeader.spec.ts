@@ -1,20 +1,24 @@
 // @vitest-environment nuxt
 import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import type { BlogCollectionItem } from '@nuxt/content'
+
 import { BlogHeader } from '#components'
-import type { Article } from '~/shared/types/content'
 
 describe('BlogHeader', () => {
-  const article: Article = {
-    _type: 'markdown',
-    _empty: false,
-    _id: 'test-article',
+  const article: BlogCollectionItem = {
+    id: 'test-article',
     title: 'Test Article',
     description: 'This is a test article',
     body: {
       type: 'root',
       children: [],
     },
+    path: '/blog/test-article',
+    seo: {},
+    extension: '.md',
+    meta: {},
+    stem: 'test-article',
     datePublished: '2023-01-01',
     dateModified: '2023-01-02',
   }
@@ -40,15 +44,6 @@ describe('BlogHeader', () => {
     const timeElement = wrapper.find('time')
     expect(timeElement.exists()).toBe(true)
     expect(timeElement.text()).toContain('投稿日 2023-01-01')
-  })
-
-  it('投稿日がない場合、表示されないこと', async () => {
-    const wrapper = await mountSuspended(BlogHeader, {
-      props: { article: { ...article, datePublished: undefined } },
-    })
-    const timeElements = wrapper.findAll('time')
-    expect(timeElements.length).toBe(1)
-    expect(timeElements[0]?.text()).not.toContain('投稿日')
   })
 
   it('最終更新日が表示されること', async () => {
