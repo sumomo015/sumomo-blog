@@ -2,7 +2,7 @@
 
 import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { ProseA, ProseCodeInline, ProseH1, ProseH2, ProseH3, ProseLi, ProseP, ProseUl } from '#components'
+import { ProseA, ProsePre, ProseCode, ProseH1, ProseH2, ProseH3, ProseLi, ProseP, ProseUl } from '#components'
 
 describe('Prose', () => {
   it('ProseA', async () => {
@@ -11,10 +11,16 @@ describe('Prose', () => {
       slots: { default: 'リンク' },
     })
     expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper.find('a').attributes('href')).toBe('https://example.com')
+    expect(wrapper.find('a').attributes('target')).toBe('_blank')
+
+    await wrapper.setProps({ href: '/test' })
+    expect(wrapper.find('a').attributes('href')).toBe('/test')
+    expect(wrapper.find('a').attributes('target')).toBeUndefined()
   })
 
-  it('ProseCodeInline', async () => {
-    const wrapper = await mountSuspended(ProseCodeInline, {
+  it('ProseCode', async () => {
+    const wrapper = await mountSuspended(ProseCode, {
       slots: { default: 'インラインコード' },
     })
     expect(wrapper.html()).toMatchSnapshot()
@@ -56,7 +62,7 @@ describe('Prose', () => {
   })
 
   it('ProsePre', async () => {
-    const wrapper = await mountSuspended(ProseCodeInline, {
+    const wrapper = await mountSuspended(ProsePre, {
       slots: { default: 'コードブロック' },
     })
     expect(wrapper.html()).toMatchSnapshot()
