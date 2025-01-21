@@ -1,6 +1,6 @@
 import { useRuntimeConfig } from '#app'
 
-interface GeratateInfo {
+interface GenerateInfo {
   h1: boolean
   h2: boolean
   h3: boolean
@@ -12,7 +12,7 @@ interface GeratateInfo {
 export function useAnchorLinks() {
   const { headings } = useRuntimeConfig().public.mdc
 
-  const generateInfo = computed<GeratateInfo>(() => {
+  const generateInfo = computed<GenerateInfo>(() => {
     if (!headings)
       return { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false }
 
