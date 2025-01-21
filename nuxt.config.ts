@@ -53,10 +53,14 @@ export default defineNuxtConfig({
     fallback: 'light',
   },
   content: {
-    highlight: {
-      theme: {
-        'default': 'github-light',
-        'dark-mode': 'one-dark-pro',
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            'default': 'github-light',
+            'dark-mode': 'one-dark-pro',
+          },
+        },
       },
     },
   },
@@ -80,7 +84,6 @@ export default defineNuxtConfig({
   },
   linkChecker: { enabled: false },
   ogImage: {
-    strictNuxtContentPaths: true,
     defaults: { component: 'Sumomo' },
     fonts: [
       'Noto+Sans+JP:400',
@@ -120,11 +123,14 @@ export default defineNuxtConfig({
         ],
         'script-src': [
           '\'self\'',
+          '\'wasm-unsafe-eval\'',
           '\'nonce-{{nonce}}\'',
           'https://*.googletagmanager.com',
         ],
         'style-src': ['\'self\'', '\'unsafe-inline\''],
       },
+      crossOriginEmbedderPolicy: 'require-corp',
+      crossOriginOpenerPolicy: 'same-origin',
     },
     sri: true,
     ssg: {
@@ -135,5 +141,4 @@ export default defineNuxtConfig({
     },
   },
   seo: { fallbackTitle: false },
-  sitemap: { strictNuxtContentPaths: true },
 })

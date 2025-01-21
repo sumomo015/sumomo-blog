@@ -12,13 +12,32 @@ describe('useAnchorLinks', () => {
     vi.resetAllMocks()
   })
 
+  it('`headings`が`undefined`の場合、全ての見出しにアンカーリンクを生成しない', () => {
+    vi.mocked(useRuntimeConfig).mockReturnValue({
+      public: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        mdc: {},
+      },
+    })
+
+    const { generateInfo, h1, h2, h3, h4, h5, h6 } = useAnchorLinks()
+    expect(generateInfo.value).toEqual({ h1: false, h2: false, h3: false, h4: false, h5: false, h6: false })
+    expect(h1.value).toBe(false)
+    expect(h2.value).toBe(false)
+    expect(h3.value).toBe(false)
+    expect(h4.value).toBe(false)
+    expect(h5.value).toBe(false)
+    expect(h6.value).toBe(false)
+  })
+
   it('`anchorLinks`が`true`の場合、全ての見出しにアンカーリンクを生成する', () => {
     vi.mocked(useRuntimeConfig).mockReturnValue({
       public: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         mdc: {
           headings: {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
             anchorLinks: true,
           },
         },
@@ -91,15 +110,43 @@ describe('useAnchorLinks', () => {
     expect(h4_2.value).toBe(true)
     expect(h5_2.value).toBe(false)
     expect(h6_2.value).toBe(true)
+
+    vi.mocked(useRuntimeConfig).mockReturnValue({
+      public: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        mdc: {
+          headings: {
+            anchorLinks: {
+              h1: undefined,
+              h2: undefined,
+              h3: undefined,
+              h4: undefined,
+              h5: undefined,
+              h6: undefined,
+            },
+          },
+        },
+      },
+    })
+
+    const { generateInfo: generateInfo3, h1: h1_3, h2: h2_3, h3: h3_3, h4: h4_3, h5: h5_3, h6: h6_3 } = useAnchorLinks()
+    expect(generateInfo3.value).toEqual({ h1: false, h2: false, h3: false, h4: false, h5: false, h6: false })
+    expect(h1_3.value).toBe(false)
+    expect(h2_3.value).toBe(false)
+    expect(h3_3.value).toBe(false)
+    expect(h4_3.value).toBe(false)
+    expect(h5_3.value).toBe(false)
+    expect(h6_3.value).toBe(false)
   })
 
   it('`anchorLinks`が`false`の場合、全ての見出しにアンカーリンクを生成しない', () => {
     vi.mocked(useRuntimeConfig).mockReturnValue({
       public: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         mdc: {
           headings: {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
             anchorLinks: false,
           },
         },
