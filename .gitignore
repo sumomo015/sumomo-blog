@@ -28,3 +28,6 @@ logs
 
 # Vitest
 coverage
+
+# Firebase
+.firebase
