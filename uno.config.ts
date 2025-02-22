@@ -3,13 +3,13 @@ import {
   transformerDirectives,
   transformerVariantGroup,
   presetWebFonts,
-  presetUno,
+  presetWind3,
   presetIcons,
 } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetUno({
+    presetWind3({
       dark: {
         dark: '.dark-mode',
         light: '.light-mode',
