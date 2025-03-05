@@ -34,7 +34,7 @@
     <NuxtImg
       class="size-24 sm:size-64"
       sizes="96px sm:256px"
-      src="/icon.png"
+      src="/images/icon.png"
       alt="Sumomo's icon"
     />
     <!-- right end -->

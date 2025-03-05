@@ -13,6 +13,6 @@ exports[`HomeTop > スナップショット 1`] = `
         <div>Bluesky</div>
       </a></div>
   </div><!-- left end -->
-  <!-- right start --><img alt="Sumomo's icon" data-nuxt-img="" sizes="(max-width: 640px) 96px, 256px" srcset="/_ipx/f_avif&amp;q_75&amp;w_96/icon.png 96w, /_ipx/f_avif&amp;q_75&amp;w_192/icon.png 192w, /_ipx/f_avif&amp;q_75&amp;w_256/icon.png 256w, /_ipx/f_avif&amp;q_75&amp;w_512/icon.png 512w" class="size-24 sm:size-64" src="/_ipx/f_avif&amp;q_75&amp;w_512/icon.png"><!-- right end -->
+  <!-- right start --><img alt="Sumomo's icon" data-nuxt-img="" sizes="(max-width: 640px) 96px, 256px" srcset="/_ipx/f_avif&amp;q_75&amp;w_96/images/icon.png 96w, /_ipx/f_avif&amp;q_75&amp;w_192/images/icon.png 192w, /_ipx/f_avif&amp;q_75&amp;w_256/images/icon.png 256w, /_ipx/f_avif&amp;q_75&amp;w_512/images/icon.png 512w" class="size-24 sm:size-64" src="/_ipx/f_avif&amp;q_75&amp;w_512/images/icon.png"><!-- right end -->
 </div>"
 `;
