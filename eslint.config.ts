@@ -10,10 +10,12 @@ import unocss from '@unocss/eslint-config/flat'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt([
-  // @ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   { name: 'unocss', ...unocss },
 ])
-  // @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   .replace('nuxt/typescript/setup', {
     name: 'nuxt/typescript/setup',
     plugins: {
@@ -64,6 +66,11 @@ export default withNuxt([
         prefer: 'type-imports',
       }],
       '@typescript-eslint/no-import-type-side-effects': 'error',
+    },
+  })
+  .override('nuxt/stylistic', {
+    rules: {
+      '@stylistic/linebreak-style': ['error', 'unix'],
     },
   })
   .remove('nuxt/vue/setup')
