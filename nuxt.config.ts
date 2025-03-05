@@ -78,7 +78,6 @@ export default defineNuxtConfig({
   },
   eslint: { config: { stylistic: true } },
   image: {
-    dir: 'assets/images',
     ipx: { modifiers: { format: 'avif', quality: 75 } },
     static: { modifiers: { format: 'avif', quality: 75 } },
   },
