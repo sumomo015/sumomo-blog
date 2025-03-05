@@ -27,6 +27,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline
+      - name: Format check
+        run: pnpm run format
       - name: Type check
         run: pnpm run type-check
       - name: Lint
@@ -35,9 +37,3 @@ jobs:
         run: pnpm run test:unit
       - name: Build
         run: pnpm run generate
-
-  format:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dprint/check@v2.2
