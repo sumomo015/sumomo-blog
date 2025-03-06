@@ -58,7 +58,7 @@
     "vue-router": "4.5.0",
     "vue-tsc": "2.2.8"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
@@ -68,11 +68,7 @@
       "re2",
       "sharp",
       "vue-demi"
-    ],
-    "overrides": {
-      "nitro": "2.10.4",
-      "nitropack": "2.10.4"
-    }
+    ]
   },
   "prettier": {
     "semi": false,
