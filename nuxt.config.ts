@@ -60,6 +60,9 @@ export default defineNuxtConfig({
       scripts: { googleAnalytics: { id: '' } },
     },
   },
+  future: {
+    compatibilityVersion: 4,
+  },
   compatibilityDate: '2024-11-01',
   nitro: {
     prerender: { autoSubfolderIndex: false },
