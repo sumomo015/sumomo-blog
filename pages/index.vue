@@ -5,7 +5,7 @@ defineOgImage({
 </script>
 
 <template>
-  <div class="flex flex-col gap-y-8 px-7 py-10 sm:(mx-auto h-full w-140 justify-center gap-y-17 px-0)">
+  <div class="flex flex-col gap-y-8 px-7 py-10 sm:mx-auto sm:h-full sm:w-140 sm:justify-center sm:gap-y-17 sm:px-0">
     <HomeTop />
     <HomeBottom />
   </div>

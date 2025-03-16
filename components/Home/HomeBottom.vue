@@ -13,7 +13,11 @@
     <div class="flex justify-center">
       <NuxtLink
         to="/blog"
-        class="rounded-md bg-sky-500 px-3.5 py-2.5 text-sm text-white dark:bg-sky-400 dark:text-gray-900 base-hover-opacity"
+        :class="[
+          'rounded-md px-3.5 py-2.5 font-medium',
+          'text-sm text-(--ui-bg) bg-(--ui-primary)',
+          'hover:opacity-60 transition-opacity duration-250',
+        ]"
       >
         記事一覧へ
       </NuxtLink>

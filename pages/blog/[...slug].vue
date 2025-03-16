@@ -23,15 +23,15 @@ useSeoMeta(blog.value?.seo ?? {})
     <article v-if="blog">
       <BlogHeader
         :article="blog"
-        class="border-b border-gray-200 pb-14 pt-20 dark:border-gray-800"
+        class="border-b border-(--ui-border) pb-14 pt-20"
       />
 
-      <div class="block lg:(grid grid-cols-10 gap-8)">
+      <div class="block lg:grid lg:grid-cols-10 lg:gap-8">
         <ContentRenderer
           :value="blog"
           class="lg:col-span-8"
         />
-        <div class="hidden lg:(col-span-2 block)">
+        <div class="hidden lg:col-span-2 lg:block">
           <BlogToc
             v-if="blog.body?.toc?.links"
             class="sticky top-16 max-h-[calc(100vh-4rem)] overflow-y-auto"
@@ -40,9 +40,9 @@ useSeoMeta(blog.value?.seo ?? {})
         </div>
       </div>
 
-      <div class="mt-10 border-b border-gray-200 py-12 dark:border-gray-800">
+      <div class="mt-10 border-b border-(--ui-border) py-12">
         <NuxtLink
-          class="base-color-link"
+          class="text-(--ui-primary)"
           to="/blog"
         >← 記事一覧へ戻る</NuxtLink>
       </div>

@@ -3,14 +3,14 @@
 exports[`BlogToc > スナップショット 1`] = `
 "<nav aria-label="目次" class="py-8">
   <p class="mb-3 truncate text-sm/6 font-semibold"> 目次 </p>
-  <ul>
-    <li class="my-1"><a href="/#section1" class="block truncate text-sm/6 base-hover-opacity base-color-secondary">Section 1</a>
+  <ul class="font-medium">
+    <li class="my-1"><a href="/#section1" class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250 text-(--ui-text-muted)">Section 1</a>
       <ul>
-        <li class="my-1 ml-3"><a href="/#subsection1" class="block truncate text-sm/6 base-hover-opacity base-color-secondary">Subsection 1</a></li>
-        <li class="my-1 ml-3"><a href="/#subsection2" class="block truncate text-sm/6 base-hover-opacity base-color-secondary">Subsection 2</a></li>
+        <li class="my-1 ml-3"><a href="/#subsection1" class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250 text-(--ui-text-muted)">Subsection 1</a></li>
+        <li class="my-1 ml-3"><a href="/#subsection2" class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250 text-(--ui-text-muted)">Subsection 2</a></li>
       </ul>
     </li>
-    <li class="my-1"><a href="/#section2" class="block truncate text-sm/6 base-hover-opacity base-color-secondary">Section 2</a>
+    <li class="my-1"><a href="/#section2" class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250 text-(--ui-text-muted)">Section 2</a>
       <ul></ul>
     </li>
   </ul>

@@ -7,7 +7,7 @@ const { h3 } = useAnchorLinks()
 <template>
   <h3
     :id="props.id"
-    class="mb-5 mt-8 scroll-mt-20 text-xl font-bold base-color-header"
+    class="mb-5 mt-8 scroll-mt-20 text-xl font-bold text-(--ui-text-highlighted)"
   >
     <NuxtLink
       v-if="!!props.id && h3"

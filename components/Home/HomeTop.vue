@@ -1,8 +1,8 @@
 <template>
-  <div class="flex items-center justify-between sm:(flex-row-reverse)">
+  <div class="flex items-center justify-between sm:flex-row-reverse">
     <!-- left start -->
     <div>
-      <h1 class="mb-2 text-4xl font-bold sm:text-center base-color-header">
+      <h1 class="mb-2 text-4xl font-bold sm:text-center text-(--ui-text-highlighted)">
         Sumomo
       </h1>
 
@@ -11,9 +11,12 @@
           to="https://github.com/sumomo015"
           target="_blank"
           external
-          class="flex items-center gap-x-2 base-hover-opacity"
+          class="flex items-center gap-x-2 hover:opacity-60 transition-opacity duration-250"
         >
-          <div class="i-simple-icons-github size-5" />
+          <UIcon
+            name="i-simple-icons-github"
+            class="size-5"
+          />
           <div>GitHub</div>
         </NuxtLink>
 
@@ -21,9 +24,12 @@
           to="https://bsky.app/profile/sumomo015.dev"
           target="_blank"
           external
-          class="flex items-center gap-x-2 base-hover-opacity"
+          class="flex items-center gap-x-2 hover:opacity-60 transition-opacity duration-250"
         >
-          <div class="i-simple-icons-bluesky size-5" />
+          <UIcon
+            name="i-simple-icons-bluesky"
+            class="size-5"
+          />
           <div>Bluesky</div>
         </NuxtLink>
       </div>

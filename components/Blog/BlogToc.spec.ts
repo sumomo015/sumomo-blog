@@ -42,7 +42,7 @@ const section2: Section = {
   element: { id: 'section2' } as Element,
 }
 
-const LINK_CLASS = 'base-color-link'
+const LINK_CLASS = 'text-(--ui-primary)'
 
 const links: TocLink[] = [
   { text: section1.title, depth: 1, id: section1.id, children: [

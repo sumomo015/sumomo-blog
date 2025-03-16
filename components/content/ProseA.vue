@@ -5,7 +5,7 @@ const isExternal = computed(() => props.href.startsWith('http'))
 
 <template>
   <NuxtLink
-    class="font-medium base-color-link hover:underline"
+    class="font-bold text-(--ui-primary) hover:underline"
     :to="href"
     :external="isExternal"
     :target="isExternal ? '_blank' : undefined"

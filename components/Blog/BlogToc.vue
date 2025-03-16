@@ -61,7 +61,7 @@ const observer: IntersectionObserver | undefined = !import.meta.server
       目次
     </p>
 
-    <ul>
+    <ul class="font-medium">
       <li
         v-for="link in links"
         :key="link.id"
@@ -69,10 +69,10 @@ const observer: IntersectionObserver | undefined = !import.meta.server
       >
         <NuxtLink
           :to="{ hash: `#${link.id}` }"
-          class="block truncate text-sm/6 base-hover-opacity"
+          class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250"
           :class="{
-            'base-color-link': visibleIds.includes(link.id),
-            'base-color-secondary': !visibleIds.includes(link.id),
+            'text-(--ui-primary)': visibleIds.includes(link.id),
+            'text-(--ui-text-muted)': !visibleIds.includes(link.id),
           }"
         >
           {{ link.text }}
@@ -86,10 +86,10 @@ const observer: IntersectionObserver | undefined = !import.meta.server
           >
             <NuxtLink
               :to="{ hash: `#${child.id}` }"
-              class="block truncate text-sm/6 base-hover-opacity"
+              class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250"
               :class="{
-                'base-color-link': visibleIds.includes(child.id),
-                'base-color-secondary': !visibleIds.includes(child.id),
+                'text-(--ui-primary)': visibleIds.includes(child.id),
+                'text-(--ui-text-muted)': !visibleIds.includes(child.id),
               }"
             >
               {{ child.text }}

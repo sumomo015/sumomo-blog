@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <pre
-    class="prose-pre my-6 overflow-x-auto border border-gray-200 rounded-md bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+    class="prose-pre my-6 overflow-x-auto border border-(--ui-border-muted) rounded-md bg-(--ui-bg-muted) px-4 py-3"
     :class="$props.class"
     :style="$props.style"
   ><slot /></pre>
