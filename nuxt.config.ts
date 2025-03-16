@@ -2,11 +2,10 @@ import { definePerson } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/color-mode',
     '@nuxt/eslint',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@unocss/nuxt',
+    '@nuxt/ui',
     '@nuxtjs/seo',
     '@nuxt/scripts',
     '@nuxt/content',
@@ -39,7 +38,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['@unocss/reset/tailwind.css'],
+  css: ['~/assets/css/main.css'],
   router: {
     options: { scrollBehaviorType: 'smooth' },
   },
@@ -48,17 +47,13 @@ export default defineNuxtConfig({
     description: 'Sumomo のブログです。日々の学びや技術的なメモを書いています。',
     defaultLocale: 'ja',
   },
-  colorMode: {
-    preference: 'system',
-    fallback: 'light',
-  },
   content: {
     build: {
       markdown: {
         highlight: {
           theme: {
-            'default': 'github-light',
-            'dark-mode': 'one-dark-pro',
+            default: 'github-light',
+            dark: 'github-dark',
           },
         },
       },
@@ -77,6 +72,15 @@ export default defineNuxtConfig({
     tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
   },
   eslint: { config: { stylistic: true } },
+  fonts: {
+    families: [
+      { name: 'Noto Sans JP', weights: [400, 500, 600, 700], styles: ['normal', 'italic'] },
+      { name: 'JetBrains Mono', weights: [400, 600], styles: ['normal', 'italic'] },
+    ],
+  },
+  icon: {
+    clientBundle: { scan: true },
+  },
   image: {
     ipx: { modifiers: { format: 'avif', quality: 75 } },
     static: { modifiers: { format: 'avif', quality: 75 } },

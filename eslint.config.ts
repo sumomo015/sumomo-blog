@@ -5,15 +5,10 @@ import parserTs from '@typescript-eslint/parser'
 import pluginVue from 'eslint-plugin-vue'
 import parserVue from 'vue-eslint-parser'
 import tseslint from 'typescript-eslint'
-import unocss from '@unocss/eslint-config/flat'
 
 import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt([
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  { name: 'unocss', ...unocss },
-])
+export default withNuxt()
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   .replace('nuxt/typescript/setup', {
