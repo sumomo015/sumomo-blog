@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LayoutsHeader > スナップショット > dark 1`] = `
+"<header class="bg-(--ui-bg) border-b-1 border-(--ui-border)">
+  <div class="flex items-center p-4 pl-6 xl:mx-auto xl:w-7xl lg:px-8"><a href="/" class="font-bold text-(--ui-text-highlighted) hover:opacity-60 transition-opacity duration-250"> Sumomo's Blog </a>
+    <div class="flex-grow-1"></div><!-- desktop menu -->
+    <nav class="mr-30 hidden gap-x-8 lg:flex" aria-label="Desktop navigation"><a href="/" class="block text-sm font-bold transition-colors hover:text-(--ui-primary)">Home</a><a href="/blog" class="block text-sm font-bold transition-colors hover:text-(--ui-primary)">Blog</a></nav><!-- desktop menu -->
+    <!-- mobile menu -->
+    <nav class="fixed inset-0 top-16 border-t-1 border-(--ui-border) bg-(--ui-bg) px-4 lg:hidden sm:px-6" aria-label="Mobile navigation" style="display: none;"><a href="/" class="mt-3 flex items-center gap-1.5 text-sm/6 font-bold transition-colors hover:text-(--ui-primary)"><span class="iconify i-ph:house size-5 flex-shrink-0" aria-hidden="true"></span><span>Home</span></a><a href="/blog" class="mt-3 flex items-center gap-1.5 text-sm/6 font-bold transition-colors hover:text-(--ui-primary)"><span class="iconify i-ph:newspaper size-5 flex-shrink-0" aria-hidden="true"></span><span>Blog</span></a></nav><!-- mobile menu -->
+    <div class="flex gap-x-1.5"><a href="https://github.com/sumomo015" rel="noopener noreferrer" target="_blank" class="size-8 flex items-center justify-center rounded-md hover:bg-(--ui-bg-elevated) transition-colors" aria-label="Go to GitHub"><span class="iconify i-simple-icons:github size-5" aria-hidden="true"></span></a><button class="size-8 flex items-center justify-center rounded-md duration-none hover:bg-(--ui-bg-elevated) transition-colors cursor-pointer" type="button" aria-label="Toggle dark mode" data-testid="toggle-color-scheme-button"><span class="iconify i-ph:moon size-5" aria-hidden="true"></span></button><button class="size-8 flex items-center justify-center rounded-md lg:hidden hover:bg-(--ui-bg-elevated) transition-colors cursor-pointer" type="button" aria-label="Toggle navigation menu" data-testid="toggle-menu-button"><span class="iconify i-ph:list size-5" aria-hidden="true"></span></button></div>
+  </div>
+</header>"
+`;
+
+exports[`LayoutsHeader > スナップショット > light 1`] = `
+"<header class="bg-(--ui-bg) border-b-1 border-(--ui-border)">
+  <div class="flex items-center p-4 pl-6 xl:mx-auto xl:w-7xl lg:px-8"><a href="/" class="font-bold text-(--ui-text-highlighted) hover:opacity-60 transition-opacity duration-250"> Sumomo's Blog </a>
+    <div class="flex-grow-1"></div><!-- desktop menu -->
+    <nav class="mr-30 hidden gap-x-8 lg:flex" aria-label="Desktop navigation"><a href="/" class="block text-sm font-bold transition-colors hover:text-(--ui-primary)">Home</a><a href="/blog" class="block text-sm font-bold transition-colors hover:text-(--ui-primary)">Blog</a></nav><!-- desktop menu -->
+    <!-- mobile menu -->
+    <nav class="fixed inset-0 top-16 border-t-1 border-(--ui-border) bg-(--ui-bg) px-4 lg:hidden sm:px-6" aria-label="Mobile navigation" style="display: none;"><a href="/" class="mt-3 flex items-center gap-1.5 text-sm/6 font-bold transition-colors hover:text-(--ui-primary)"><span class="iconify i-ph:house size-5 flex-shrink-0" aria-hidden="true"></span><span>Home</span></a><a href="/blog" class="mt-3 flex items-center gap-1.5 text-sm/6 font-bold transition-colors hover:text-(--ui-primary)"><span class="iconify i-ph:newspaper size-5 flex-shrink-0" aria-hidden="true"></span><span>Blog</span></a></nav><!-- mobile menu -->
+    <div class="flex gap-x-1.5"><a href="https://github.com/sumomo015" rel="noopener noreferrer" target="_blank" class="size-8 flex items-center justify-center rounded-md hover:bg-(--ui-bg-elevated) transition-colors" aria-label="Go to GitHub"><span class="iconify i-simple-icons:github size-5" aria-hidden="true"></span></a><button class="size-8 flex items-center justify-center rounded-md duration-none hover:bg-(--ui-bg-elevated) transition-colors cursor-pointer" type="button" aria-label="Toggle dark mode" data-testid="toggle-color-scheme-button"><span class="iconify i-ph:sun size-5" aria-hidden="true"></span></button><button class="size-8 flex items-center justify-center rounded-md lg:hidden hover:bg-(--ui-bg-elevated) transition-colors cursor-pointer" type="button" aria-label="Toggle navigation menu" data-testid="toggle-menu-button"><span class="iconify i-ph:list size-5" aria-hidden="true"></span></button></div>
+  </div>
+</header>"
+`;

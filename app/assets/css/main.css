@@ -1,0 +1,13 @@
+@import 'tailwindcss' theme(static);
+@import '@nuxt/ui';
+
+@theme {
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root,
+body,
+#__nuxt {
+  height: 100%;
+}
