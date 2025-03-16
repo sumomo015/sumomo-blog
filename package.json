@@ -48,7 +48,6 @@
     "nuxt": "3.16.0",
     "nuxt-og-image": "5.0.3",
     "nuxt-schema-org": "5.0.4",
-    "nuxt-security": "2.2.0",
     "prettier": "3.5.3",
     "tailwindcss": "4.0.14",
     "typescript": "5.8.2",
