@@ -64,6 +64,10 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   compatibilityDate: '2024-11-01',
+  nitro: {
+    prerender: { autoSubfolderIndex: false },
+    preset: 'static',
+  },
   typescript: {
     tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
   },
@@ -78,6 +82,7 @@ export default defineNuxtConfig({
     clientBundle: { scan: true },
   },
   image: {
+    provider: 'ipx',
     ipx: { modifiers: { format: 'avif', quality: 75 } },
     static: { modifiers: { format: 'avif', quality: 75 } },
   },
