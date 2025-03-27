@@ -68,6 +68,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-11-01',
   nitro: {
+    prerender: { autoSubfolderIndex: false },
     preset: 'static',
     output: {
       dir: '{{ rootDir }}/.amplify-hosting',
