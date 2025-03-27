@@ -70,6 +70,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static',
     output: {
+      dir: '{{ rootDir }}/.amplify-hosting',
       publicDir: '{{ output.dir }}/static{{ baseURL }}',
     },
   },
@@ -93,6 +94,7 @@ export default defineNuxtConfig({
     clientBundle: { scan: true },
   },
   image: {
+    provider: 'ipx',
     ipx: { modifiers: { format: 'avif', quality: 75 } },
     static: { modifiers: { format: 'avif', quality: 75 } },
   },
