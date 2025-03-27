@@ -1,6 +1,3 @@
-import { copyFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
-
 import { definePerson } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
