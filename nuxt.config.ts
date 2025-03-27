@@ -70,19 +70,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: { autoSubfolderIndex: false },
     preset: 'static',
-    output: {
-      dir: '{{ rootDir }}/.amplify-hosting',
-      publicDir: '{{ output.dir }}/static{{ baseURL }}',
-    },
   },
   typescript: {
     tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
-  },
-  hooks: {
-    'nitro:build:public-assets': async (nitro) => {
-      const outDir = nitro.options.output.dir
-      await copyFile('deploy-manifest.json', resolve(outDir, 'deploy-manifest.json'))
-    },
   },
   eslint: { config: { stylistic: true } },
   fonts: {
