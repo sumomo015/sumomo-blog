@@ -1,3 +1,6 @@
+import { copyFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
+
 import { definePerson } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
@@ -64,8 +67,19 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   compatibilityDate: '2024-11-01',
+  nitro: {
+    output: {
+      publicDir: '{{ output.dir }}/static{{ baseURL }}',
+    },
+  },
   typescript: {
     tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
+  },
+  hooks: {
+    'nitro:build:public-assets': async (nitro) => {
+      const outDir = nitro.options.output.dir
+      await copyFile('deploy-manifest.json', resolve(outDir, 'deploy-manifest.json'))
+    },
   },
   eslint: { config: { stylistic: true } },
   fonts: {
