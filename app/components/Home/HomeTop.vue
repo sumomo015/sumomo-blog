@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { NuxtLink, NuxtImg, UIcon } from '#components'
+</script>
+
 <template>
   <div class="flex items-center justify-between sm:flex-row-reverse">
     <!-- left start -->

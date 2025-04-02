@@ -1,7 +1,9 @@
 // @vitest-environment nuxt
 import { describe, it, expect, afterEach, vi } from 'vitest'
-import { useAnchorLinks } from './useAnchorLinks'
+
 import { useRuntimeConfig } from '#app'
+
+import { useAnchorLinks } from './useAnchorLinks'
 
 vi.mock('#app', () => ({
   useRuntimeConfig: vi.fn(),

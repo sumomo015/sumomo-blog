@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { NuxtLink, BlogHeader, ContentRenderer, BlogToc } from '#components'
+
 const route = useRoute()
 
-const { data: blog } = await useAsyncData(route.path, () => {
+const { data: blog } = await useAsyncData(route.path, async () => {
   return queryCollection('blog').path(route.path).first()
 })
 
@@ -44,7 +46,9 @@ useSeoMeta(blog.value?.seo ?? {})
         <NuxtLink
           class="text-(--ui-primary)"
           to="/blog"
-        >← 記事一覧へ戻る</NuxtLink>
+        >
+          ← 記事一覧へ戻る
+        </NuxtLink>
       </div>
     </article>
   </div>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 import type { BlogCollectionItem } from '@nuxt/content'
 
 defineProps<{ article: BlogCollectionItem }>()
@@ -10,7 +12,9 @@ defineProps<{ article: BlogCollectionItem }>()
       <NuxtLink
         class="text-(--ui-primary)"
         to="/blog"
-      >← 記事一覧へ戻る</NuxtLink>
+      >
+        ← 記事一覧へ戻る
+      </NuxtLink>
     </div>
 
     <h1 class="mb-4 text-4xl font-bold text-(--ui-text-highlighted)">

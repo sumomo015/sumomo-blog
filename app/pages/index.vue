@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { HomeTop, HomeBottom } from '#components'
+
 defineOgImage({
   props: { title: 'Sumomo\'s Blog' },
 })

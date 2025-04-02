@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 import type { TocLink } from '@nuxt/content'
 
 const props = defineProps<{ links: TocLink[] }>()
@@ -15,7 +17,7 @@ const tocIds = computed(() => {
   return ids
 })
 
-function observeElements(ids: string[]) {
+function observeElements(ids: string[]): void {
   ids.forEach((id) => {
     const element = document.getElementById(id)
     if (element) observer?.observe(element)
@@ -43,6 +45,7 @@ const observer: IntersectionObserver | undefined = !import.meta.server
         newVisibleIds.push(entry.target.id)
       }
       else if (!entry.isIntersecting && newVisibleIds.includes(entry.target.id)) {
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         newVisibleIds.splice(newVisibleIds.indexOf(entry.target.id), 1)
       }
     })

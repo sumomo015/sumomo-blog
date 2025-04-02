@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 const props = defineProps<{ href: string }>()
+
+defineSlots<{
+  default: () => void
+}>()
+
 const isExternal = computed(() => props.href.startsWith('http'))
 </script>
 

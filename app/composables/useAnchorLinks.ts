@@ -9,7 +9,15 @@ interface GenerateInfo {
   h6: boolean
 }
 
-export function useAnchorLinks() {
+export function useAnchorLinks(): {
+  generateInfo: globalThis.ComputedRef<GenerateInfo>
+  h1: ComputedRef<boolean>
+  h2: ComputedRef<boolean>
+  h3: ComputedRef<boolean>
+  h4: ComputedRef<boolean>
+  h5: ComputedRef<boolean>
+  h6: ComputedRef<boolean>
+} {
   const { headings } = useRuntimeConfig().public.mdc
 
   const generateInfo = computed<GenerateInfo>(() => {
