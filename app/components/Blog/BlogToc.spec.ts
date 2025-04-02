@@ -2,8 +2,9 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 
-import type { TocLink } from '@nuxt/content'
 import { BlogToc } from '#components'
+
+import type { TocLink } from '@nuxt/content'
 
 interface Section {
   id: string
@@ -57,25 +58,25 @@ describe('BlogToc', () => {
 
   beforeEach(() => {
     class MockIntersectionObserver implements IntersectionObserver {
-      readonly root: Document | Element | null
-      readonly rootMargin: string
-      readonly thresholds: number[]
+      public readonly root: Document | Element | null
+      public readonly rootMargin: string
+      public readonly thresholds: number[]
 
       private observeredElements: Element[] = []
 
-      disconnect = () => {
+      public disconnect = (): void => {
         this.observeredElements = []
       }
 
-      observe = (target: Element) => {
+      public observe = (target: Element): void => {
         this.observeredElements.push(target)
       }
 
-      takeRecords = vi.fn()
-      unobserve = vi.fn()
+      public takeRecords = vi.fn()
+      public unobserve = vi.fn()
 
-      constructor(callback: IntersectionObserverCallback, options?: IntersectionObserverInit) {
-        observerCallback = (entries: IntersectionObserverEntry[]) => {
+      public constructor(callback: IntersectionObserverCallback, options?: IntersectionObserverInit) {
+        observerCallback = (entries: IntersectionObserverEntry[]): void => {
           callback(entries, this)
         }
         this.root = options?.root ?? null

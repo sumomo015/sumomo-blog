@@ -5,6 +5,10 @@ defineProps<{
   class?: string
   style?: StyleValue
 }>()
+
+defineSlots<{
+  default: () => void
+}>()
 </script>
 
 <template>

@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 import { definePerson } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/eslint',
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxt/ui',
@@ -71,7 +71,6 @@ export default defineNuxtConfig({
   typescript: {
     tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
   },
-  eslint: { config: { stylistic: true } },
   fonts: {
     families: [
       { name: 'Noto Sans JP', weights: [400, 500, 600, 700], styles: ['normal', 'italic'] },

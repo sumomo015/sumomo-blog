@@ -2,6 +2,7 @@
 
 import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+
 import { ProseA, ProsePre, ProseCode, ProseH1, ProseH2, ProseH3, ProseLi, ProseP, ProseUl } from '#components'
 
 describe('Prose', () => {

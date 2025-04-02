@@ -1,14 +1,20 @@
 <script setup lang="ts">
+import { LayoutsHeader, LayoutsFooter } from '#components'
+
+defineSlots<{
+  default: () => void
+}>()
+
 const colorMode = useColorMode()
 const isDarkMode = computed(() => colorMode.value === 'dark')
 const isScrollLocked = useScrollLock(window)
 const now = useNow()
 const year = computed(() => now.value.getFullYear())
 
-function toggleColorScheme() {
+function toggleColorScheme(): void {
   colorMode.preference = isDarkMode.value ? 'light' : 'dark'
 }
-function toggleScrollLock(scrollLock: boolean) {
+function toggleScrollLock(scrollLock: boolean): void {
   isScrollLocked.value = scrollLock
 }
 </script>

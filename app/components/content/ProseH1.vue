@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 const props = defineProps<{ id?: string }>()
+
+defineSlots<{
+  default: () => void
+}>()
 
 const { h1 } = useAnchorLinks()
 </script>

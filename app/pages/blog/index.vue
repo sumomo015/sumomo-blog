@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 useSeoMeta({
   title: '記事一覧',
   description: 'Sumomo\'s Blog の記事一覧です。',
@@ -32,7 +34,9 @@ defineOgImage()
         <NuxtLink
           class="text-xl font-medium text-(--ui-primary) hover:opacity-60 transition-opacity duration-250"
           :to="blog.path"
-        >{{ blog.title }}</NuxtLink>
+        >
+          {{ blog.title }}
+        </NuxtLink>
       </p>
     </div>
   </div>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink, UIcon, ClientOnly } from '#components'
+
 defineProps<{ isDarkMode: boolean }>()
 const emit = defineEmits<{
   toggleColorScheme: []
@@ -14,7 +16,7 @@ interface NavLink {
 const route = useRoute()
 
 const isMenuOpen = ref(false)
-const toggleMenu = () => {
+const toggleMenu = (): void => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
@@ -34,6 +36,10 @@ watch(isMenuOpen, (isOpen) => {
 watch(() => route.fullPath, () => {
   isMenuOpen.value = false
 })
+
+function handleToggleColorScheme(): void {
+  emit('toggleColorScheme')
+}
 </script>
 
 <template>
@@ -108,7 +114,7 @@ watch(() => route.fullPath, () => {
           type="button"
           aria-label="Toggle dark mode"
           data-testid="toggle-color-scheme-button"
-          @click="$emit('toggleColorScheme')"
+          @click="handleToggleColorScheme"
         >
           <ClientOnly>
             <UIcon

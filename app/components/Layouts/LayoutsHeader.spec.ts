@@ -34,8 +34,10 @@ describe('LayoutsHeader', () => {
       props: { isDarkMode: true },
     })
     await wrapper.find(selectorMenuButton).trigger('click')
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     expect(wrapper.emitted('toggleMenu')?.[0]).toEqual([true])
     await wrapper.find(selectorMenuButton).trigger('click')
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     expect(wrapper.emitted('toggleMenu')?.[1]).toEqual([false])
   })
 })
