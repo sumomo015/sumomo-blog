@@ -25,9 +25,3 @@ logs
 
 # Vitest
 coverage
-
-# Firebase
-.firebase
-
-# Amplify
-.amplify-hosting
