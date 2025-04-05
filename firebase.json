@@ -1,8 +1,0 @@
-{
-  "hosting": {
-    "site": "sumomo-blog-b0c8",
-    "public": ".output/public",
-    "cleanUrls": true,
-    "trailingSlash": false
-  }
-}
