@@ -2,9 +2,9 @@
 
 exports[`HomeBottom > スナップショット 1`] = `
 "<div>
-  <p class="mb-5"> こんにちは！<strong>スモモ</strong>と申します。私のブログにお越しいただきありがとうございます。 </p>
-  <p class="mb-5"> 現在、東京でフロントエンドエンジニアとして働いており、VueやNuxtを使った開発が大好きです。 </p>
-  <p class="mb-10"> このブログでは、日々の学びや経験をシェアしていきたいと思います。どうぞゆっくりご覧ください！ </p>
+  <p class="mb-5"> こんにちは、 <strong>スモモ</strong>です！ </p>
+  <p class="mb-5"> 東京でフロントエンドエンジニアとして、VueとNuxtに愛を注ぎながらコードと格闘する毎日を送っています。 <br> このブログでは、開発中に出会った「なるほど！」や「詰まった…」をそのままシェア中。 </p>
+  <p class="mb-10"> ちょっと役立つかもしれない、たまに深掘り、たまにゆるめ。 <br> コーヒー片手に、ゆっくりしていってください ☕💻 </p>
   <div class="flex justify-center"><a href="/blog" class="rounded-md px-3.5 py-2.5 font-medium text-sm text-(--ui-bg) bg-(--ui-primary) hover:opacity-60 transition-opacity duration-250"> 記事一覧へ </a></div>
 </div>"
 `;
