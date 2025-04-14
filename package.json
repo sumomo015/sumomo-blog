@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@iconify-json/ph": "1.2.2",
-    "@iconify-json/simple-icons": "1.2.31",
+    "@iconify-json/simple-icons": "1.2.32",
     "@nuxt/content": "3.4.0",
     "@nuxt/fonts": "0.11.1",
     "@nuxt/icon": "1.12.0",
@@ -52,7 +52,7 @@
     "vue-router": "4.5.0",
     "vue-tsc": "2.2.0"
   },
-  "packageManager": "pnpm@10.8.0",
+  "packageManager": "pnpm@10.8.1",
   "prettier": {
     "semi": false,
     "singleQuote": true
