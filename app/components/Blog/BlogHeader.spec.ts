@@ -12,8 +12,8 @@ describe('BlogHeader', () => {
     title: 'Test Article',
     description: 'This is a test article',
     body: {
-      type: 'root',
-      children: [],
+      type: 'minimal',
+      value: [],
     },
     path: '/blog/test-article',
     seo: {},
