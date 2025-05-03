@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtLink } from '#components'
-
 import type { TocLink } from '@nuxt/content'
 
 const props = defineProps<{ links: TocLink[] }>()
