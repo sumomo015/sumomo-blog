@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtLink, UIcon, ClientOnly } from '#components'
-
 defineProps<{ isDarkMode: boolean }>()
 const emit = defineEmits<{
   toggleColorScheme: []

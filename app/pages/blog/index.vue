@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtLink } from '#components'
-
 useSeoMeta({
   title: '記事一覧',
   description: 'Sumomo\'s Blog の記事一覧です。',

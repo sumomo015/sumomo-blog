@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtLayout } from '#components'
-
 import type { NuxtError } from '#app'
 
 defineProps<{ error: NuxtError }>()

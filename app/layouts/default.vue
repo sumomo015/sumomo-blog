@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { LayoutsHeader, LayoutsFooter } from '#components'
-
 defineSlots<{
   default: () => void
 }>()

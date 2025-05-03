@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtLink, BlogHeader, ContentRenderer, BlogToc } from '#components'
-
 const route = useRoute()
 
 const { data: blog } = await useAsyncData(route.path, async () => {
