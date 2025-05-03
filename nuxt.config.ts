@@ -77,9 +77,6 @@ export default defineNuxtConfig({
       { name: 'JetBrains Mono', weights: [400, 600], styles: ['normal', 'italic'] },
     ],
   },
-  icon: {
-    clientBundle: { scan: true },
-  },
   image: {
     provider: 'ipx',
     ipx: { modifiers: { format: 'avif', quality: 75 } },
