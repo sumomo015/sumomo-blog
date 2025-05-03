@@ -1,3 +1,5 @@
+import { useRuntimeConfig } from '#app'
+
 interface GenerateInfo {
   h1: boolean
   h2: boolean
