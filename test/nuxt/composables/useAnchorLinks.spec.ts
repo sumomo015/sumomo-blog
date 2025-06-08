@@ -2,8 +2,7 @@
 import { describe, it, expect, afterEach, vi } from 'vitest'
 
 import { useRuntimeConfig } from '#app'
-
-import { useAnchorLinks } from './useAnchorLinks'
+import { useAnchorLinks } from '#imports'
 
 vi.mock('#app', () => ({
   useRuntimeConfig: vi.fn(),
