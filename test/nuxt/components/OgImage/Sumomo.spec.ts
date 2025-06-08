@@ -3,7 +3,7 @@
 import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 
-import OgImageSumomo from './Sumomo.vue'
+import OgImageSumomo from '~/components/OgImage/Sumomo.vue'
 
 describe('OgImageSumomo', () => {
   const selectorTitle = '[data-testid="title"]'
