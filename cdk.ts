@@ -24,8 +24,7 @@ const requiredEnvVars = {
 const missingVars = Object.entries(requiredEnvVars)
   .filter(([, value]) => !value)
   .map(([key]) => key)
-// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-if (missingVars.length > 0) {
+if (missingVars.length) {
   throw new Error(`Missing required environment variables for CDK deployment: ${missingVars.join(', ')}`)
 }
 
