@@ -10,6 +10,7 @@ export default defineESLintConfig({
     '.output',
     '.data',
     'coverage',
+    'cdk.out',
   ],
 }, {
   files: [

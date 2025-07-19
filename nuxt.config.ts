@@ -7,17 +7,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/ui',
     '@nuxtjs/seo',
-    '@nuxt/scripts',
     '@nuxt/content',
     '@nuxtjs/html-validator',
-    '@nuxt/test-utils/module',
   ],
-  $production: {
-    scripts: { registry: { googleAnalytics: true } },
-  },
-  $test: {
-    ogImage: { enabled: false },
-  },
   components: {
     dirs: [{ extensions: ['vue'], path: '~/components' }],
   },
@@ -55,21 +47,17 @@ export default defineNuxtConfig({
       },
     },
   },
-  runtimeConfig: {
-    public: {
-      scripts: { googleAnalytics: { id: '' } },
-    },
-  },
-  future: {
-    compatibilityVersion: 4,
-  },
-  compatibilityDate: '2024-11-01',
-  nitro: {
-    prerender: { autoSubfolderIndex: false },
-    preset: 'static',
-  },
+  compatibilityDate: '2025-07-19',
   typescript: {
-    tsConfig: { compilerOptions: { noUncheckedIndexedAccess: true } },
+    tsConfig: {
+      compilerOptions: { noUncheckedIndexedAccess: true },
+      include: [
+        '../eslint.config.ts',
+        '../content.config.ts',
+        '../cdk.ts',
+        '../lib/**/*.ts',
+      ],
+    },
   },
   fonts: {
     families: [
@@ -96,7 +84,7 @@ export default defineNuxtConfig({
       image: '/images/icon.png',
       sameAs: [
         'https://github.com/sumomo015',
-        'https://bsky.app/profile/sumomo015.dev',
+        'https://bsky.app/profile/sumomo015.com',
       ],
     }),
   },
