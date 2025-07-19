@@ -8,6 +8,6 @@ defineProps<{ year: number }>()
       Made with 🩵 in Tokyo<br>
       using Vue, Nuxt, and Tailwind CSS.
     </p>
-    <p>© {{ year }} - sumomo015.dev</p>
+    <p>© {{ year }} - sumomo015.com</p>
   </footer>
 </template>
