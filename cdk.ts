@@ -6,15 +6,27 @@ import { BlogStack } from './lib/blog-stack'
 
 import type { Environment } from 'aws-cdk-lib'
 
-const CDK_ACCOUNT = process.env.CDK_ACCOUNT
-const CDK_REGION = process.env.CDK_REGION
-const CDK_ZONE_ID = process.env.CDK_ZONE_ID
-const CDK_ZONE_NAME = process.env.CDK_ZONE_NAME
-const CDK_DOMAIN_NAME = process.env.CDK_DOMAIN_NAME
-const CDK_CERTIFICATE_ARN = process.env.CDK_CERTIFICATE_ARN
+const CDK_ACCOUNT = process.env.CDK_ACCOUNT ?? ''
+const CDK_REGION = process.env.CDK_REGION ?? ''
+const CDK_ZONE_ID = process.env.CDK_ZONE_ID ?? ''
+const CDK_ZONE_NAME = process.env.CDK_ZONE_NAME ?? ''
+const CDK_DOMAIN_NAME = process.env.CDK_DOMAIN_NAME ?? ''
+const CDK_CERTIFICATE_ARN = process.env.CDK_CERTIFICATE_ARN ?? ''
 
-if (!CDK_ACCOUNT || !CDK_REGION || !CDK_ZONE_ID || !CDK_ZONE_NAME || !CDK_DOMAIN_NAME || !CDK_CERTIFICATE_ARN) {
-  throw new Error('Missing required environment variables for CDK deployment.')
+const requiredEnvVars = {
+  CDK_ACCOUNT,
+  CDK_REGION,
+  CDK_ZONE_ID,
+  CDK_ZONE_NAME,
+  CDK_DOMAIN_NAME,
+  CDK_CERTIFICATE_ARN,
+}
+const missingVars = Object.entries(requiredEnvVars)
+  .filter(([, value]) => !value)
+  .map(([key]) => key)
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+if (missingVars.length > 0) {
+  throw new Error(`Missing required environment variables for CDK deployment: ${missingVars.join(', ')}`)
 }
 
 const env: Environment = {
