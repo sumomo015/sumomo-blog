@@ -1,8 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`LayoutsFooter > スナップショット 1`] = `
-"<footer class="text-center text-sm text-(--ui-text-muted) font-medium">
-  <p class="mb-2"> Made with 🩵 in Tokyo<br> using Vue, Nuxt, and Tailwind CSS. </p>
-  <p>© 2024 - sumomo015.dev</p>
-</footer>"
-`;
