@@ -13,7 +13,7 @@ defineSlots<{
 
 <template>
   <pre
-    class="prose-pre my-6 overflow-x-auto border border-(--ui-border-muted) rounded-md bg-(--ui-bg-muted) px-4 py-3"
+    class="prose-pre my-6 overflow-x-auto border border-muted rounded-md bg-muted px-4 py-3"
     :class="$props.class"
     :style="$props.style"
   ><slot /></pre>

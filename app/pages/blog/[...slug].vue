@@ -23,7 +23,7 @@ useSeoMeta(blog.value?.seo ?? {})
     <article v-if="blog">
       <BlogHeader
         :article="blog"
-        class="border-b border-(--ui-border) pb-14 pt-20"
+        class="border-b border-default pb-14 pt-20"
       />
 
       <div class="block lg:grid lg:grid-cols-10 lg:gap-8">
@@ -40,9 +40,9 @@ useSeoMeta(blog.value?.seo ?? {})
         </div>
       </div>
 
-      <div class="mt-10 border-b border-(--ui-border) py-12">
+      <div class="mt-10 border-b border-default py-12">
         <NuxtLink
-          class="text-(--ui-primary)"
+          class="text-primary"
           to="/blog"
         >
           ← 記事一覧へ戻る

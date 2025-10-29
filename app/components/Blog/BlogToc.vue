@@ -36,20 +36,20 @@ onUnmounted(() => {
 
 const observer: IntersectionObserver | undefined = !import.meta.server
   ? new IntersectionObserver((entries) => {
-    const newVisibleIds: string[] = [...visibleIds.value]
+      const newVisibleIds: string[] = [...visibleIds.value]
 
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !newVisibleIds.includes(entry.target.id)) {
-        newVisibleIds.push(entry.target.id)
-      }
-      else if (!entry.isIntersecting && newVisibleIds.includes(entry.target.id)) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !newVisibleIds.includes(entry.target.id)) {
+          newVisibleIds.push(entry.target.id)
+        }
+        else if (!entry.isIntersecting && newVisibleIds.includes(entry.target.id)) {
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        newVisibleIds.splice(newVisibleIds.indexOf(entry.target.id), 1)
-      }
-    })
+          newVisibleIds.splice(newVisibleIds.indexOf(entry.target.id), 1)
+        }
+      })
 
-    visibleIds.value = newVisibleIds
-  }, { rootMargin: '-64px 0px 0px 0px' })
+      visibleIds.value = newVisibleIds
+    }, { rootMargin: '-64px 0px 0px 0px' })
   : undefined
 </script>
 
@@ -72,8 +72,8 @@ const observer: IntersectionObserver | undefined = !import.meta.server
           :to="{ hash: `#${link.id}` }"
           class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250"
           :class="{
-            'text-(--ui-primary)': visibleIds.includes(link.id),
-            'text-(--ui-text-muted)': !visibleIds.includes(link.id),
+            'text-primary': visibleIds.includes(link.id),
+            'text-muted': !visibleIds.includes(link.id),
           }"
         >
           {{ link.text }}
@@ -89,8 +89,8 @@ const observer: IntersectionObserver | undefined = !import.meta.server
               :to="{ hash: `#${child.id}` }"
               class="block truncate text-sm/6 hover:opacity-60 transition-opacity duration-250"
               :class="{
-                'text-(--ui-primary)': visibleIds.includes(child.id),
-                'text-(--ui-text-muted)': !visibleIds.includes(child.id),
+                'text-primary': visibleIds.includes(child.id),
+                'text-muted': !visibleIds.includes(child.id),
               }"
             >
               {{ child.text }}

@@ -19,7 +19,7 @@
         to="/blog"
         :class="[
           'rounded-md px-3.5 py-2.5 font-medium',
-          'text-sm text-(--ui-bg) bg-(--ui-primary)',
+          'text-sm text-(--ui-bg) bg-primary',
           'hover:opacity-60 transition-opacity duration-250',
         ]"
       >

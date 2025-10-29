@@ -8,18 +8,18 @@ defineProps<{ article: BlogCollectionItem }>()
   <div>
     <div class="mb-10">
       <NuxtLink
-        class="text-(--ui-primary)"
+        class="text-primary"
         to="/blog"
       >
         ← 記事一覧へ戻る
       </NuxtLink>
     </div>
 
-    <h1 class="mb-4 text-4xl font-bold text-(--ui-text-highlighted)">
+    <h1 class="mb-4 text-4xl font-bold text-highlighted">
       {{ article.title }}
     </h1>
 
-    <p class="text-(--ui-text-muted) font-medium">
+    <p class="text-muted font-medium">
       <time
         v-if="article.datePublished"
         :datetime="article.datePublished"
