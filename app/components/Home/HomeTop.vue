@@ -2,7 +2,7 @@
   <div class="flex items-center justify-between sm:flex-row-reverse">
     <!-- left start -->
     <div>
-      <h1 class="mb-2 text-4xl font-bold sm:text-center text-(--ui-text-highlighted)">
+      <h1 class="mb-2 text-4xl font-bold sm:text-center text-highlighted">
         Sumomo
       </h1>
 

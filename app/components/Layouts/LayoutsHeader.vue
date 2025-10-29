@@ -24,9 +24,9 @@ const navLinks: NavLink[] = [
 ]
 const navLinkBaseClass: string[] = [
   'font-bold transition-colors',
-  'hover:text-(--ui-primary)',
+  'hover:text-primary',
 ]
-const navLinkActiveClass = 'text-(--ui-primary)'
+const navLinkActiveClass = 'text-primary'
 
 watch(isMenuOpen, (isOpen) => {
   emit('toggleMenu', isOpen)
@@ -41,16 +41,16 @@ function handleToggleColorScheme(): void {
 </script>
 
 <template>
-  <header class="bg-(--ui-bg) border-b-1 border-(--ui-border)">
+  <header class="bg-default border-b border-default">
     <div class="flex items-center p-4 pl-6 xl:mx-auto xl:w-7xl lg:px-8">
       <NuxtLink
         to="/"
-        class="font-bold text-(--ui-text-highlighted) hover:opacity-60 transition-opacity duration-250"
+        class="font-bold text-highlighted hover:opacity-60 transition-opacity duration-250"
       >
         Sumomo's Blog
       </NuxtLink>
 
-      <div class="flex-grow-1" />
+      <div class="grow" />
 
       <!-- desktop menu -->
       <nav
@@ -73,7 +73,7 @@ function handleToggleColorScheme(): void {
       <!-- mobile menu -->
       <nav
         v-show="isMenuOpen"
-        class="fixed inset-0 top-16 border-t-1 border-(--ui-border) bg-(--ui-bg) px-4 lg:hidden sm:px-6"
+        class="fixed inset-0 top-16 border-t border-default bg-default px-4 lg:hidden sm:px-6"
         aria-label="Mobile navigation"
       >
         <NuxtLink
@@ -95,7 +95,7 @@ function handleToggleColorScheme(): void {
 
       <div class="flex gap-x-1.5">
         <NuxtLink
-          class="size-8 flex items-center justify-center rounded-md hover:bg-(--ui-bg-elevated) transition-colors"
+          class="size-8 flex items-center justify-center rounded-md hover:bg-elevated transition-colors"
           to="https://github.com/sumomo015"
           target="_blank"
           external
@@ -108,7 +108,7 @@ function handleToggleColorScheme(): void {
         </NuxtLink>
 
         <button
-          class="size-8 flex items-center justify-center rounded-md duration-none hover:bg-(--ui-bg-elevated) transition-colors cursor-pointer"
+          class="size-8 flex items-center justify-center rounded-md duration-none hover:bg-elevated transition-colors cursor-pointer"
           type="button"
           aria-label="Toggle dark mode"
           data-testid="toggle-color-scheme-button"
@@ -123,7 +123,7 @@ function handleToggleColorScheme(): void {
         </button>
 
         <button
-          class="size-8 flex items-center justify-center rounded-md lg:hidden hover:bg-(--ui-bg-elevated) transition-colors cursor-pointer"
+          class="size-8 flex items-center justify-center rounded-md lg:hidden hover:bg-elevated transition-colors cursor-pointer"
           type="button"
           aria-label="Toggle navigation menu"
           data-testid="toggle-menu-button"
